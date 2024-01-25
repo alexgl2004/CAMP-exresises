@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <div class="forms-add">
+      <div class="form-1">
+        <form
+          action="https://tmzhf4wztf.execute-api.eu-central-1.amazonaws.com/prod/formecho"
+          method="GET"
+        >
+          <fieldset id="search_another">
+            <legend>Send form</legend>
+            <label for="name">Name</label>
+            <input  placeholder="Type your name" type="text" id="name" name="name" />
+            <label for="variant">Variant</label>
+            <fieldset id="search_another">
+              
+              <label for="variant1">Dry <input type="radio" checked="checked" id="variant1" name="variant" value="Dry" /></label>
+              
+              <label for="variant2">Milk <input type="radio" checked="checked" id="variant2" name="variant" value="Milk" /></label>
+              
+              <label for="variant3">Vegan <input type="radio" checked="checked" id="variant3" name="variant" value="Vegan" /></label>
+            
+            </fieldset>
+
+            <label for="type">Type</label>
+            <select name="type" id="type">
+              <option value="cup">Cup</option>
+              <option value="plate">Plate</option>
+              <option value="bucketful">Bucketful</option>
+            </select>
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="Type your e-mail" />
+            <!-- Input group -->
+            <input type="checkbox" checked="checked" id="expressDelivery" name="expressDelivery" value="true" />
+            <label for="expressDelivery">Express Delivery</label>
+            <button type="submit">Submit</button>
+          </fieldset> 
+        </form>
+      </div>
+      <div class="form-2">
+        <h1>Youtube search</h1>
+        <form
+          action="https://www.youtube.com/results"
+          method="GET"
+        >
+          <fieldset id="search_youtube">
+            <legend>Search here</legend>
+            <!--label for="search_query">Search field</label-->
+            <input
+              placeholder="Write your search query here"
+              type="text"
+              id="search_query"
+              name="search_query"
+            />
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

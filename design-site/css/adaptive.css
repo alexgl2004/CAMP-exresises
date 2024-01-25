@@ -1,0 +1,25 @@
+@media screen and (max-width:900px){
+    main{
+     padding-right:240px;
+     flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width:700px){
+    main article{
+      flex-direction: column;      
+    }
+  }
+
+  @media screen and (max-width:523px){
+
+    main{
+      padding-right:20px;
+    }
+
+    .man_watch{
+       opacity: 0.3;
+    }
+ 
+  }  
+  

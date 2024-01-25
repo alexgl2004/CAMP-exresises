@@ -1,0 +1,74 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #000;
+  color:white;
+}
+
+input,
+textarea,
+select,
+button {
+  margin: 6px 0;
+  display: block;
+}
+
+label[for]{
+  cursor:pointer;
+  margin-right:6px;
+  white-space: nowrap;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input {
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+input#search_query{
+  width:400px;
+}
+
+fieldset{
+  max-width:500px;
+  border-radius: 10px;
+  background: #d82424;
+  border: none;
+  box-shadow: 0px 5px 10px -4px rgba(255,255,255,0.3);
+}
+
+fieldset#search_another{
+  width:200px;
+}
+
+fieldset legend{
+  color:#ffffff;
+  background: #d82424;
+  padding:5px 10px;
+  border-radius: 5px;
+}
+
+fieldset button, fieldset input[type=text], fieldset input[type=email], fieldset select, fieldset textarea{
+  border-radius: 5px;
+  padding:5px 10px;
+  border:2px solid #e47c7c;
+  color:red;
+  font-weight: bold;
+}
+
+fieldset#search_youtube button, fieldset#search_youtube input[type=text]{
+  display: inline-block;
+}
+
+fieldset#search_youtube input[type=text]{
+  border:2px solid #e47c7c;
+  color:black;
+}
+
+fieldset#search_youtube button:hover{
+  color:#000;
+}

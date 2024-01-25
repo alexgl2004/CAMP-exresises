@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Youtube search</h1>
+    <form
+      action="https://www.youtube.com/results"
+      method="GET"
+    >
+      <fieldset id="search_youtube">
+        <legend>Search here</legend>
+        <!--label for="search_query">Search field</label-->
+        <input
+          placeholder="Write your search query here"
+          type="text"
+          id="search_query"
+          name="search_query"
+        />
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
