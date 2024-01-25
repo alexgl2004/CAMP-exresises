@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="logo" href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+  </header>
+  <main>
+    <div class="stiky-header">
+      <h1>Feedback</h1>
+    </div>    
+    <form class="guruweba_example_form" name="feedback" method="POST" action="kontakt.html">
+      <div class="grosse-form">
+        <div class="form-container">
+          <label for="theme" class="guruweba_example_infofield">Theme</label>
+          <select name="theme" required="required">
+            <option value="">Choose..</option>
+            <option>Service</option>
+            <option>Help</option>
+            <option>Repair</option>
+            <option>Wish</option>
+          </select>
+        </div>
+        <div class="form-container">
+          <label for="name">Your name</label>
+          <input type="text" name="name" required="required" placeholder="Ivanov I I">
+        </div>
+        <div class="form-container">
+          <label for="email">Your email</label>
+          <input type="email" name="email" required="required" placeholder="ivanov.email@email.com">
+        </div>
+        <div class="form-container">
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Text here..."></textarea>
+        </div>
+        <div class="form-container">
+          <input type="submit" name="submit_btn" value="Send">
+        </div>
+      </div>
+
+    </form>    
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top:100px;
+}
+
+header {
+  background-color: #264653;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: 0px 15px 5px 1px rgba(0, 0, 0, 0.4);
+  transition-property: all;
+  transition-duration: 0.75s;
+  opacity: 1;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index: 1000;  
+}
+
+header:hover {
+  padding-top: 25px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  opacity: 0.9;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 12px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  transition-property: all;
+  transition-duration: 0.75s;
+}
+
+header nav li a {
+  top:0;
+  display: inline-block;
+  padding: 5px 15px;
+  position:relative;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+header nav li a:hover {
+  top:-5px;
+}
+/*
+header nav li:nth-child(4) a {
+  opacity: 0;
+}
+*/
+header nav li a:hover, header nav li.active a {
+  background: #ffffff;
+  color:#000000;
+}
+/*
+header nav li:nth-child(3):hover + li:nth-child(4) a {
+  opacity: 1;
+}
+*/
+header > a {
+  padding: 5px 15px;
+  border:none;
+  width:80px;
+  z-index: 2;
+  top:30px;
+  position:relative;
+}
+
+header > a img{
+  width:80px;
+  height:80px;  
+}
+
+header a:hover {
+  color: #264653;
+  text-decoration: none;
+}
+
+header:hover > a{
+  top:20px;
+}
+
+header > a:hover {
+  top:20px;
+  color: #ffffff;
+  opacity: 0.9;
+  background:none;
+  border-color: none;
+}
+
+main {
+  padding: 20px;
+  height: 100%;
+  min-height: 500px;
+  /*  border:1px solid;*/
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+header:hover + main {
+  color: #dddddd;
+}
+
+main article {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  /*  border:1px solid;*/
+  transition-property: all;
+  transition-duration: 0.75s;
+}
+
+.flex-container-main{
+  display: block;
+}
+
+.flex-container-main img{
+  float:left; 
+}
+
+header:hover + main article {
+  text-align: center;
+  /*flex-wrap: wrap;
+  align-items: flex-end;*/
+}
+
+header:hover + main article p:nth-child(3) {
+  text-align: center;
+  /*order: -2;*/
+}
+
+header:hover + main article p {
+  padding: 5px;
+  /*  flex-direction: column;*/
+}
+
+/*
+header a:hover + main article p{
+  padding:50px ! important;
+  color:yellow ! important;
+  flex-direction: column;
+}
+*/
+
+main p {
+  transition-property: all;
+  transition-duration: 0.75s;
+}
+
+.stiky-header{
+  position:sticky;
+  top:100px;
+  width:100%;
+  background:#0740d0b7;
+  padding:5px 10px;
+  border-radius: 5px;
+  margin: 30px;
+  margin-left:-5px;
+}
+
+.stiky-header *{
+  color:#ffffff;
+}
+
+.stiky-header:first-child{
+  margin-top:0;
+}
+
+.grosse-form{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.form-container{
+  position: relative;
+  z-index: 2;
+  margin-bottom:10px;
+  width:49.3%;
+  margin:5px;
+}
+
+  .form-container label{
+    position:relative;
+    z-index: 1;
+    top:3px;
+    font-size:12px;
+    color:#ffffff;
+    display: block;
+    border:1px solid #0740d0b7;
+    background:#0740d0b7;
+    width:400px;
+    padding:2px 5px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .form-container input, .form-container textarea, .form-container select{
+    width:400px; 
+    border:1px solid #0740d0b7;
+    min-height: 30px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
+    padding: 5px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .form-container textarea{
+    min-height: 100px;
+    min-width: 400px;
+    max-width: 400px;
+  }
+
+  .form-container button, .form-container input[type=submit]{
+    position:sticky;
+    top:100px;
+    width:400px;
+    background:#0740d0b7;
+    border:1px solid #0740d0b7;
+    color:#fff;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin: 30px;
+    margin-left:-5px;
+    cursor:pointer;
+  }
+
+  .form-container button:hover, .form-container input[type=submit]:hover{
+    background:#ffffff;
+    border:1px solid #0740d0b7;
+    color:#0740d0b7;
+
+  }
