@@ -22,3 +22,24 @@ main {
   flex-direction: column;
   gap: 24px;
 }
+
+button{
+  margin:0 3px;
+  padding:5px 10px;
+  background: #1fbcdb;
+  border:1px solid #1fbcdb;
+  color:#fff;
+  border-radius:5px;
+}
+
+button:hover{
+  color:black;
+  background: darkturquoise;
+  cursor:pointer;
+}
+
+button.active{
+  background: #dbb21f;
+  border:1px solid #dbb21f;
+  color:black;
+}
