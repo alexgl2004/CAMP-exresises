@@ -57,7 +57,9 @@ function change_object_arr_of_states(selectedButton, arr_of_states){
 function App() {
 
   const [selectedButton, setSelectedButton] = useState('all');
-  let users_out, users_out_temp, users_out_temp_sort
+  
+  let users_out_temp
+  let users_out_temp_sort
 
   arr_of_states = change_object_arr_of_states(selectedButton, arr_of_states)
 
@@ -75,22 +77,37 @@ function App() {
         return user.gender == gender
       });
 //      users_out_temp.sort((a, b) => a.name.last - b.name.last)
+    }else{
+      users_out_temp = users
     }
   }
 
-  //users_out_temp.sort((a, b) => b.gender - a.gender)
-  users_out_temp.sort((a, b) => a.dob.age - b.dob.age)
+//  users_out_temp.sort((a, b) => b.gender - a.gender)
+//  users_out_temp.sort((a, b) => b.dob.date - a.dob.date)
+//  users_out_temp.sort((a, b) => b.dob.age - a.dob.age)
+//  users.sort((a, b) => a.dob.age - b.dob.age)
+//  users.sort((a, b) => b.name.last - a.name.last)
+//  users.sort((a, b) => b.dob.age - a.dob.age)
 
   //SORT
-//  users_out_temp = arr_of_states.By_name==1?users_out_temp.sort((a, b) => a.name.last - b.name.last):users_out_temp
-//  users_out_temp = arr_of_states.By_age==1?users_out_temp.sort((a, b) => a.dob.age - b.dob.age):users_out_temp
+  
+  if(arr_of_states.By_name==1){
+    console.log('a')
+    users_out_temp_sort = users_out_temp.sort((a, b) => a.name.last - b.name.last)
+  }else if(arr_of_states.By_age==1){
+    users_out_temp_sort = users_out_temp.sort((a, b) => a.dob.age - b.dob.age)
+    console.log('b')
+  }else{
+    users_out_temp_sort = users_out_temp.sort((a, b) => a.name.first - b.name.first)
+    console.log('c')
+  }
   
 
   console.log(arr_of_states.By_name+'||'+arr_of_states.By_age)
-  console.log(users_out_temp)
+  //console.log(users_out_temp)
 
   //OUTPUT
-  users_out = users_out_temp.map((user) => {
+  const users_out = users_out_temp_sort.map((user) => {
     return <Card key={user.email} user={user} />;
   })
   
