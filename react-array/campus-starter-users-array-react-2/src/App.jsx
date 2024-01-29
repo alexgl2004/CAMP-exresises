@@ -63,7 +63,7 @@ function App() {
 
   arr_of_states = change_object_arr_of_states(selectedButton, arr_of_states)
 
-  //console.log(selectedButton,arr_of_states)
+  console.log(selectedButton,arr_of_states)
 
   //FILTER
   if(arr_of_states.All==1){
